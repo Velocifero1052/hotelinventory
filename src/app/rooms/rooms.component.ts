@@ -13,6 +13,8 @@ export class RoomsComponent implements OnInit {
 
   roomsCount: number = 20;
 
+  selectedRoom!: RoomList;
+
   rooms: Room = {
     totalRooms: 20,
     availableRooms: 15,
@@ -23,6 +25,10 @@ export class RoomsComponent implements OnInit {
 
   toggle(): void {
     this.hidden = !this.hidden;
+  }
+
+  selectRoom(room: RoomList): void {
+    console.log(room);
   }
 
   ngOnInit(): void {
